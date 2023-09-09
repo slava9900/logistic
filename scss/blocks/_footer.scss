@@ -1,0 +1,123 @@
+.footer {
+    padding-top: 15px;
+    background-color: #181818;
+    color: white;
+
+    &__container {
+        position: relative;
+        padding: 25px 0 80px;
+        border-top: dashed white;
+
+        p {
+            margin-bottom: 0;
+
+            a {
+                color: white;
+                text-decoration: none;
+                transition: 0.6s;
+
+                &:hover {
+                    color: #E91E63;;
+                }
+
+                &:active {
+                    color: #bd0041;
+                }
+            }
+        }
+    }
+
+    &__address {
+        margin-bottom: 30px;
+    }
+
+    &__contacts {
+        margin-bottom: 20px;
+    }
+
+    &__logo {
+        position: relative;
+        float: right;
+        width: 148px;
+        height: 70px;
+        text-align: center;
+        font-family: "Sofia Sans Condensed",sans-serif;
+
+        span {
+            &:first-child {
+                position: absolute;
+                top: 13px;
+                left: 0;
+                padding: 0 5px;
+                font-size: 8px;
+                background-color: #fff;
+                color: #181818;
+                z-index: 2;
+                word-spacing: 10%;
+                letter-spacing: 5px;
+                border-radius: 5px;
+            }
+
+            &:last-child {
+                font-size: 70px;
+                position: absolute;
+                top: -31px;
+                left: 50%;
+                -webkit-transform: translate(-50%, 0);
+                -ms-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .footer {
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 0;
+    
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &__contacts {
+            margin-bottom: 0;
+        }
+    
+        &__logo {
+            position: relative;
+            width: 148px;
+            height: 70px;
+            text-align: center;
+            font-family: "Sofia Sans Condensed",sans-serif;
+    
+            span {
+                &:first-child {
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                    font-size: 8px;
+                    background-color: #fff;
+                    color: #181818;
+                    z-index: 2;
+                    word-spacing: 10%;
+                    letter-spacing: 5px;
+                    border-radius: 5px;
+                }
+    
+                &:last-child {
+                    font-size: 70px;
+                    position: absolute;
+                    top: -31px;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, 0);
+                    -ms-transform: translate(-50%, 0);
+                    transform: translate(-50%, 0);
+                }
+            }
+        }
+    }
+}

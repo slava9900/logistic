@@ -1,0 +1,217 @@
+.services {
+    &__container {
+        padding: 84px 0 100px;
+        overflow: hidden;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        margin-bottom: 25px;
+
+        span {
+            font-weight: 600;
+            color: #181818;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 385px;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        & > div {
+            position: relative;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: 0.5s;
+
+            &:hover {
+                transform: scale(1.08);
+            }
+
+            p {
+                position: absolute;
+                top: 30%;
+                width: 100%;
+                text-align: center;
+                font-weight: 600;
+                color: #332a2a;
+                text-shadow: #ffffff 1px 0 10px;
+                //box-shadow: 0px 3px 9px 0px rgba(0,0,0,.5);
+                pointer-events: none;
+            }
+        }
+
+        img {
+            height: 180px;
+            border-radius: 5px;
+        }
+    }
+
+    &__elem {
+        top: 92px;
+        left: 10px;
+
+        &--sec {
+            position: absolute;
+            top: 822px;
+            left: auto;
+            right: 37px;
+            filter: invert(1);
+        }
+    }
+
+    ul {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        padding-top: 40px;
+        border: 2px solid #fff;
+        background-color:  #181818;
+        border-radius: 10px;
+
+        li {
+            position: relative;
+            margin: 0 0 35px 81px;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.6s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: -35px;
+                background-image: url(../../images/services/check.svg);
+                background-repeat: no-repeat;
+                width: 24px;
+                height: 24px;
+                filter: invert(1);
+            }
+
+            &:hover {
+                transform: translate3d(2px, 2px, 2px);
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .services {
+        &__container {
+            padding: 90px 0 115px;
+        }
+
+        &__block {
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+            flex-direction: row;
+            height: auto;
+            margin-bottom: 50px;
+    
+            & > div {
+                position: relative;
+                cursor: pointer;
+                border-radius: 30px;
+                transition: 0.5s;
+    
+                &:hover {
+                    transform: scale(1.08);
+                }
+    
+                p {
+                    position: absolute;
+                    top: 30%;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 600;
+                    color: #332a2a;
+                    text-shadow: #ffffff 1px 0 10px;
+                    //box-shadow: 0px 3px 9px 0px rgba(0,0,0,.5);
+                    pointer-events: none;
+                }
+            }
+    
+            img {
+                height: 180px;
+                border-radius: 5px;
+            }
+        }
+
+        &__elem {
+            top: 109px;
+            left: 12px;
+
+            &--sec {
+                top: 692px;
+                left: auto;
+                right: 110px;
+                width: 30px;
+            }
+        }
+
+        ul {
+            width: 500px;
+            height: 350px;
+            padding-top: 50px;
+
+            li {
+                margin: 0 0 35px 170px;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .services {
+        &__elem {
+            top: 121px;
+
+            &--sec {
+                top: 828px;
+                right: 272px;
+            }
+        }
+
+        &__block {
+            img {
+                height: 250px;
+            }
+
+            & > div {
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        ul {
+            width: 600px;
+            height: 400px;
+            padding-top: 45px;
+
+            li {
+                margin: 0 0 40px 176px;
+                font-size: 30px;
+
+                &::before {
+                    top: 8px;
+                    left: -42px;
+                    width: 30px;
+                    height: 30px;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}

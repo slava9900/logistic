@@ -1,0 +1,269 @@
+:root {
+    --mainPrimary: #181818;
+    --mainSecondary: #fafafa;
+}
+
+body.body {
+    background-color: var(--mainSecondary);
+    // background: var(--mainPrimary);
+}
+
+.title {
+    font-size: 23px;
+    font-weight: bold;
+    text-align: end;
+    white-space: nowrap;
+    border-bottom: 2px solid;
+    background: -webkit-linear-gradient(#e91e1e, #332a35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 20px;
+    text-align: center;
+    color: #5F5F5F;
+}
+
+.elem {
+    position: absolute;
+    filter: drop-shadow(-1px -2px 6px red);
+}
+
+.main {
+    overflow: hidden;
+
+    &__container {
+        position: relative;
+        width: 350px;
+        margin: 0 auto;
+        padding: 0;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    &__parallax {
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 150px; 
+        color: #fff;
+
+        &--first {
+            background-image: url(../../images/trucks/truck1.jpg);
+        }
+
+        &--sec {
+            background-image: url(../../images/trucks/truck3.jpg);
+        }
+    }
+
+    &__theme {
+        position: absolute;
+        top: 27px;
+        right: 0;
+        border: 1px solid #181818;
+        border-radius: 5px;
+
+        label {
+            margin: 0;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 600;
+            color: #181818;
+        }
+    }
+
+    &__select {
+        border: none;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    height: 325px;
+    overflow: hidden;
+    transition: 1s;
+    
+    img {
+        width: 100%;
+    }
+}
+
+.carousel {
+    position: relative;
+    top: 35px;
+
+    &__block {
+        position: absolute;
+        top: 65px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 350px;
+
+        h1 {
+            margin-bottom: 25px;
+            color: white;
+            font-family: "Work Sans",sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            text-shadow: #000 1px 0 10px;
+        }
+
+        a {
+            font-size: 17px;
+            font-weight: 700;
+            color: #75f17f;
+            text-shadow: #000 1px 0 10px;
+            filter: drop-shadow(-1px -2px 6px green);
+            transition: 0.4s;
+
+            &:hover {
+                color: #40ff50;
+                text-decoration: none;
+            }
+
+            &:active {
+                color: #00e114;
+            }
+        }
+    }
+}
+
+.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
+.running__text {
+    margin-bottom: 20px;
+    font-size: 22px;
+    white-space: nowrap;
+    animation: text 8s infinite linear;
+    color: #0f0a0a;
+    
+    span {
+        color: #f82f2f;
+        font-weight: 500;
+    }
+}
+
+@keyframes text {
+    0%{
+        transform: translate(100%, 0);
+    }
+    
+    100%{
+        transform: translate(-150%, 0);
+    }
+}
+
+@media(min-width: 768px) {
+    .title {
+        font-size: 35px;
+    }
+
+    .main {
+        &__container {
+            width: 680px;
+        }
+    }
+
+    .elem {
+        left: 12px;
+        width: 28px;
+    }
+
+    .carousel {
+        top: 30px;
+
+        &-item {
+            min-height: 400px;
+            max-height: 550px;
+
+            img {
+                min-height: 400px;
+                max-height: 550px;
+            }
+        }
+
+        &__block {
+            top: 100px;
+            width: 680px;
+    
+            h1 {
+                margin-bottom: 25px;
+                font-size: 45px;
+            }
+    
+            a {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .running__text {
+        font-size: 24px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .main {
+        &__container {
+            width: 1100px;
+        }
+
+        &__parallax {
+            height: 200px;
+        }
+    }
+
+    .elem {
+        width: 35px;
+    }
+
+    .carousel {
+        top: 15px;
+
+        &-item {
+            min-height: 500px;
+            max-height: 650px;
+
+            img {
+                min-height: 500px;
+                max-height: 650px;
+            }
+        }
+
+        &__block {
+            top: 240px;
+            width: 1100px;
+    
+            h1 {
+                margin-bottom: 25px;
+                font-size: 50px;
+            }
+    
+            a {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
